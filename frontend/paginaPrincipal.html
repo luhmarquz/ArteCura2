@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <img src="../frontend/assets/logo.png" alt="Logo" width="300px">
+
+    <div class="cabecalho-direita">
+      <div id="usuarioLogado" style="margin-right: 10px;"></div>
+
+      <div class="menu">
+        <a href="paginaPrincipal.html" class="nav-link">Home</a>
+        <a href="paginaPrincipal.html" class="nav-link">Arte terapia</a>
+        <a href="sobre.html" class="nav-link">Sobre</a>
+        <a href="#" id="linkPerfil" class="nav-link">Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="folder1" oncontextmenu="return false">
+    <img src="../frontend/assets/imagemPrincipal.png" class="bloquear-imagemPrincipal" width="40px">
+  </div>
+
+  <div class="cabecalhoPaginaPrincipal">
+    <a href="paginaPrincipal.html" class="nav-link1">Arteterapia</a>
+    <a href="../frontend/artigosPagina.html" class="nav-link1">Artigos</a>
+    <a href="../frontend/paginaVideos.html" class="nav-link1">Vídeos</a>
+    <a href="../frontend/paginaProfissionais.html" class="nav-link1">Profissionais</a>
+  </div>
+
+<section id="sobre-arteterapia" class="info">
+  <h2>O que é a arteterapia?</h2>
+  <p>
+    A arteterapia é uma abordagem terapêutica que utiliza diferentes formas de expressão artística — como desenho, pintura, modelagem, colagem, escrita criativa, música e outras — como meio de promover autoconhecimento, comunicação, bem-estar emocional e desenvolvimento pessoal.
+  </p>
+  <p>
+  Seu objetivo não é produzir obras de arte esteticamente bonitas, mas sim permitir que a pessoa expresse sentimentos, pensamentos e experiências muitas vezes difíceis de colocar em palavras. Por meio do processo criativo, é possível acessar conteúdos do inconsciente, trabalhar memórias, elaborar traumas e desenvolver novas formas de lidar com emoções e desafios.
+  </p>
+    <p>
+   A prática da arteterapia pode ser individual ou em grupo, e é indicada para todas as idades, desde crianças até idosos. Ela é utilizada tanto no contexto clínico — para auxiliar no tratamento de transtornos emocionais, psicológicos e comportamentais — quanto em ambientes educacionais, hospitalares e comunitários, como ferramenta de apoio e cuidado.
+  </p>
+    <p>
+    O papel do arteterapeuta é oferecer um ambiente seguro e acolhedor, propondo atividades e materiais adequados para que o participante possa se expressar livremente, sem julgamentos. Dessa forma, a arteterapia favorece o autoconhecimento, o fortalecimento da autoestima, a melhora na comunicação e a construção de recursos internos para lidar com a vida de forma mais equilibrada.
+  </p>
+</section>
+
+<section id="depoimentos-familias">
+  <h2>Depoimentos</h2>
+  <p>
+    Histórias reais de transformação e crescimento, contadas por quem vivencia os efeitos da arteterapia
+    no dia a dia. Relatos que mostram como a arte pode ser uma ponte entre o sentir e o falar.
+  </p>
+  <div class="depoimentos">
+    <div class="depoimento">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de mãe">
+      "Meu filho está mais calmo e comunicativo depois das sessões."
+      <strong>Ana, mãe do Pedro</strong>
+    </div>
+    <div class="depoimento">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de pai">
+      "A arteterapia ajudou minha filha a se expressar melhor."
+      <strong>Carlos, pai da Júlia</strong>
+    </div>
+    <div class="depoimento">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Foto de mãe">
+      "Percebi mais autoestima e alegria no meu filho."
+      <strong>Mariana, mãe do Lucas</strong>
+    </div>
+  </div>
+</section>
+
+<section id="galeria-artes">
+  <h2>Trabalhos</h2>
+
+  <div class="carrossel">
+    <div class="slides" id="slides">
+      <img src="assets/pexels-mccutcheon-1449934.jpg" alt="Arte 1">
+      <img src="assets/pexels-jadson-thomas-164235-542556.jpg" alt="Arte 2">
+      <img src="assets/pexels-daiangan-102127.jpg" alt="Arte 3">
+    </div>
+  </div>
+  <div class="nav">
+    <button onclick="mudarSlide(0)">1</button>
+    <button onclick="mudarSlide(1)">2</button>
+    <button onclick="mudarSlide(2)">3</button>
+  </div>
+</section>
+
+<script src="./js/paginaPrincipal.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <div>
+                <a href="paginaPrincipal.html">Início</a>
+                <a href="artigosPagina.html">Artigos</a>
+                <a href="paginaProfissionais.html">Profissionais</a>
+                <a href="paginaVideos.html">Vídeos</a>
+            </div>
+            <div>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="#">Contato</a>
+                <a href="#">FAQ</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
+            <div>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Comunidade</a>
+                <a href="#">Eventos</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+
+        <div class="portal-duvidas">
+            <p>Dúvidas? Entre em contato!</p>
+            <form>
+                <input type="email" placeholder="Seu e-mail">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Arte e Cura • Todos os direitos reservados</p>
+        <a href="#" class="back-to-top">↑ Voltar ao topo</a>
+    </div>
+</footer>
+
+</html>

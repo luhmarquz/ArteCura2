@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profissional</title>
+    <link rel="stylesheet" href="../css/perfilProfissional.css"> 
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="../assets/logo.png" alt="Logo" width="300px">
+        <div class="cabecalho-direita">
+            <div id="usuarioLogado" style="margin-right: 10px;"></div>
+            <div class="menu">
+                <a href="../paginaPrincipal.html" class="nav-link">Home</a>
+                <a href="../artigosPagina.html" class="nav-link">Artigos</a>
+                <a href="../paginaVideos.html" class="nav-link">Vídeos</a>
+                <a href="../paginaProfissionais.html" class="nav-link">Profissionais</a>
+                <a href="#" id="linkPerfil" class="nav-link">Perfil</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-banner">
+        
+        <form id="formFotoProf" enctype="multipart/form-data" class="profile-pic-wrapper">
+            <img src="../assets/placeholder-perfil.png" alt="Foto de Perfil" class="foto-perfil" id="fotoPerfilPreview">
+            <label for="inputFotoProf" id="labelFotoProf" class="btn-editar-foto">Editar foto</label>
+            <button type="button" id="btnSair" class="btn-sair">Sair da Conta</button>
+            <input type="file" name="foto" id="inputFotoProf" accept="image/*" style="display: none;">
+        </form>
+
+        <div class="profile-info">
+            <h2 id="nomeUsuario">Carregando...</h2>
+            <p class="nickname" id="nickname">@...</p>
+            <p id="localizacao">Localização: ...</p>
+            <p id="formacao">Formação: ...</p>
+            
+            <div class="bio" id="bio">
+                <p>...</p>
+            </div>
+            
+            <div class="social-links">
+                <p><a id="linkInstagram" href="#">Instagram: ...</a></p>
+                <p><a id="linkWhatsapp" href="#">Whatsapp: ...</a></p>
+            </div>
+        </div>
+
+        <div class="profile-actions">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <strong id="numPublicacoes">0</strong>
+                    <span>publicações</span>
+                </div>
+                <div class="stat-item">
+                    <strong id="numSeguidores">0</strong>
+                    <span>seguidores</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <div id="followButtonContainer" style="display: none;"></div>
+
+                
+                
+                <button class="btn-editar-perfil" id="btnEditarPerfil" 
+                    onclick="window.location.href='editarPerfilProfissional.html'" style="display: none;">
+                    Editar
+                </button>
+                
+                <button class="btn-criar-postagem" id="btnCriarPostagem" style="display: none;" 
+                    onclick="window.location.href='adicionarPostagem.html'">
+                    +
+                </button>
+            </div>
+        </div>
+
+    </div> <div class="content-section">
+        <h2>Conteúdo publicado</h2>
+
+        <div class="barra-filtros-perfil">
+            <select id="filtroCategoria" class="filtro-perfil">
+                <option value="">Todas Categorias</option>
+                <option value="Métodos">Métodos</option>
+                <option value="História">História</option>
+                <option value="Científico">Científico</option>
+                <option value="Formação">Formação</option>
+            </select>
+            <select id="filtroTipo" class="filtro-perfil">
+                <option value="">Todos Tipos</option>
+                <option value="artigo">Artigo</option>
+                <option value="video">Vídeo</option>
+            </select>
+            <button id="btnFiltrarPosts" class="btn-busca">Filtrar</button>
+        </div>
+        
+        <div id="listaPosts">
+            <p>Carregando postagens...</p>
+        </div>
+    </div> <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div>
+                    <a href="../paginaPrincipal.html">Início</a>
+                    <a href="../artigosPagina.html">Artigos</a>
+                    <a href="../paginaProfissionais.html">Profissionais</a>
+                    <a href="../paginaVideos.html">Vídeos</a>
+                </div>
+                <div>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Contato</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+                <div>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Comunidade</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+
+            <div class="portal-duvidas">
+                <p>Dúvidas? Entre em contato!</p>
+                <form>
+                    <input typea="email" placeholder="Seu e-mail">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Arte e Cura • Todos os direitos reservados</p>
+            <a href="#" class="back-to-top">↑ Voltar ao topo</a>
+        </div>
+    </footer>
+
+
+    <script src="../js/perfilUtils.js"></script>
+    <script src="../js/perfilProfissional.js"></script>
+
+</body>
+</html>

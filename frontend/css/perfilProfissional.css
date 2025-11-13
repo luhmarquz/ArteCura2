@@ -1,0 +1,480 @@
+/* ==================================================== */
+/* 1. ESTILOS GERAIS
+/* ==================================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* ==================================================== */
+/* 2. ESTILOS DO CABEÇALHO
+/* ==================================================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.cabecalho-direita { 
+    display: flex; 
+    align-items: center; 
+}
+.menu { 
+    display: flex; 
+    gap: 20px; 
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+.nav-link:hover { 
+    background-color: #f0f0f0; 
+}
+
+/* ==================================================== */
+/* 3. LAYOUT DO BANNER DE PERFIL (CORRIGIDO COM GRID)
+/* ==================================================== */
+
+/* (ATUALIZADO) display: none; está aqui */
+.btn-editar-foto,
+.btn-sair {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #603F8B;
+    width: 100%; 
+}
+.profile-banner {
+    background-color: #603F8B;
+    color: white;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* (CORREÇÃO) Usando Grid para o layout de 3 colunas */
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Col 1 (Foto) | Col 2 (Info) | Col 3 (Ações) */
+    gap: 30px; 
+    align-items: start;
+}
+
+/* --- Coluna 1: Foto --- */
+.profile-pic-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    background-color: #eee;
+}
+.btn-editar-foto {
+    background-color: #f0f0f0;
+    color: #603F8B;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: none; 
+}
+.btn-editar-foto:hover { 
+    background-color: #ddd; 
+}
+
+/* --- Coluna 2: Informações --- */
+.profile-info h2 {
+    font-size: 2.2em;
+    margin: 0 0 5px 0;
+}
+.profile-info .nickname {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+.profile-info p { 
+    margin: 4px 0; 
+    font-size: 1em; 
+}
+.profile-info .bio {
+    margin-top: 15px;
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-size: 0.95em;
+    max-width: 500px;
+}
+.profile-info .social-links {
+    margin-top: 20px;
+}
+.profile-info .social-links p {
+    margin: 5px 0;
+}
+.profile-info .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Coluna 3: Ações e Stats --- */
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha à direita */
+    gap: 15px;
+    white-space: nowrap; 
+}
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    color: #f0f0f0;
+}
+.stat-item strong {
+    display: block;
+    font-size: 1.2em;
+    color: white;
+}
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.btn-editar-perfil {
+    background-color: #f0f0f0;
+    color: #603F8B;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-criar-postagem {
+    background-color: #8cbf74;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 2em;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-acao-primaria, .btn-acao-secundaria {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-acao-primaria { background-color: #8cbf74; color: white; }
+.btn-acao-secundaria { background-color: #f0f0f0; color: #333; }
+
+
+/* ==================================================== */
+/* 4. SEÇÃO "CONTEÚDO PUBLICADO"
+/* ==================================================== */
+.content-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+.content-section h2 {
+    color: #603F8B;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+.barra-filtros-perfil {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.filtro-perfil, .btn-busca {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 0.9em;
+    background-color: #f0f0f0;
+}
+.btn-busca {
+    background-color: #8cbf74;
+    color: white;
+    cursor: pointer;
+    border-color: #8cbf74;
+}
+#listaPosts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.post-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ==================================================== */
+/* 5. ESTILOS PARA A PÁGINA "EDITAR PERFIL"
+/* ==================================================== */
+.edit-profile-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.edit-profile-container h2 {
+    color: #603F8B;
+    text-align: center;
+    margin-top: 0;
+}
+.form-grupo {
+    margin-bottom: 20px;
+}
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo input[type="password"],
+.form-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+.form-grupo textarea {
+    height: 120px;
+    resize: vertical;
+}
+.edit-actions-main {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.btn-salvar {
+    background-color: #603F8B;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-cancelar {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.edit-actions-danger {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* ==================================================== */
+/* 6. ESTILOS DO RODAPÉ
+/* ==================================================== */
+.footer {
+    background-color: #91b95c;
+    color: #444;
+    font-size: 0.95rem;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #5a856d;
+}
+
+.portal-duvidas p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #603F8B;
+}
+
+.portal-duvidas form {
+    display: flex;
+    gap: 8px;
+}
+
+.portal-duvidas input {
+    padding: 8px 12px;
+    border: 1px solid #603F8B;
+    border-radius: 20px;
+    outline: none;
+    flex: 1;
+}
+
+.portal-duvidas button {
+    background-color: #603F8B;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.portal-duvidas button:hover {
+    background-color: #603F8B;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.back-to-top {
+    text-decoration: none;
+    color: #5a856d;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-to-top:hover {
+    color: #476b56;
+}
+
+/* ==================================================== */
+/* 7. RESPONSIVIDADE
+/* ==================================================== */
+@media (max-width: 768px) {
+    .profile-banner {
+        /* Quebra o grid para 2 colunas: Foto | Info+Ações */
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+    }
+    .profile-actions {
+        /* A Coluna 3 agora vai para baixo da Coluna 2 */
+        grid-column: 2 / 3; /* Ocupa a segunda coluna */
+        grid-row: 2 / 3;    /* E a segunda linha */
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        white-space: normal;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #8a6fb0;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho { 
+        padding: 10px 15px; 
+    }
+    .profile-banner {
+        /* Empilha tudo em 1 coluna */
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .profile-pic-wrapper,
+    .profile-info,
+    .profile-actions {
+        /* Reseta o grid, faz tudo ocupar 1 coluna */
+        grid-column: 1 / -1; 
+        grid-row: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile-info .social-links {
+        display: none; /* Esconde links sociais aqui */
+    }
+    .profile-actions {
+        flex-direction: column; /* Empilha botões de ação */
+        gap: 15px;
+    }
+    .stats-grid {
+        justify-content: center;
+        width: 100%;
+    }
+}

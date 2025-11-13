@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos - ArteCura</title>
+  
+    <link rel="stylesheet" href="./css/listarConteudo.css">
+ 
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="./assets/logo.png" alt="Logo" width="300px">
+        <div class="cabecalho-direita">
+            <div id="usuarioLogado" style="margin-right: 10px;"></div>
+            <div class="menu">
+                <a href="paginaPrincipal.html" class="nav-link">Home</a>
+                <a href="artigosPagina.html" class="nav-link">Artigos</a>
+                <a href="paginaProfissionais.html" class="nav-link">Profissionais</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container-conteudo">
+        <h2>Vídeos</h2>
+        
+        <div class="barra-pesquisa">
+            <select id="filtroCategoria" class="filtro"> <option value="">Todas as categorias</option>
+                <option value="Métodos">Métodos</option>
+                <option value="História">História</option>
+                <option value="Científico">Científico</option>
+                <option value="Formação">Formação</option>
+            </select>
+            
+            <input type="text" id="inputBusca" placeholder="Buscar por título...">
+            <button id="btnBusca" class="btn-busca">Buscar</button>
+        </div>
+        
+        <div id="listaConteudo"> <p style="text-align: center;">Carregando vídeos...</p>
+        </div>
+    </main>
+
+    <script src="./js/listarConteudo.js"></script>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <div>
+                <a href="#">Início</a>
+                <a href="#">Artigos</a>
+                <a href="#">Profissionais</a>
+                <a href="#">Vídeos</a>
+            </div>
+            <div>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Contato</a>
+                <a href="#">FAQ</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
+            <div>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Comunidade</a>
+                <a href="#">Eventos</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+
+        <div class="portal-duvidas">
+            <p>Dúvidas? Entre em contato!</p>
+            <form>
+                <input type="email" placeholder="Seu e-mail">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Arte e Cura • Todos os direitos reservados</p>
+        <a href="#" class="back-to-top">↑ Voltar ao topo</a>
+    </div>
+</footer>
+</body>
+</html>

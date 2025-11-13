@@ -1,0 +1,77 @@
+/* css/editarPostagem.css */
+
+.form-container { 
+    max-width: 600px; 
+    margin: 50px auto; 
+    padding: 30px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    color: #603F8B;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group { 
+    margin-bottom: 20px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: bold; 
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; /* Garante que o padding não estoure */
+}
+
+.form-group select[disabled] {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+/* Botões */
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-acao {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-salvar {
+    background-color: #8cbf74; /* Verde */
+    color: white;
+    flex-grow: 1; /* Ocupa mais espaço */
+}
+.btn-salvar:hover {
+    background-color: #72a361;
+}
+
+.btn-cancelar {
+    background-color: #aaa; /* Cinza */
+    color: white;
+}
+.btn-cancelar:hover {
+    background-color: #888;
+}

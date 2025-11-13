@@ -1,0 +1,110 @@
+/* css/profissionais.css */
+/* Estilos específicos para a página de busca de profissionais */
+
+.busca-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.busca-container h2 {
+    color: #603F8B; /* Roxo */
+    text-align: center;
+}
+
+#formBusca {
+    display: flex;
+    gap: 10px;
+}
+
+#inputBusca {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Botão de busca (reutilizando .btn-busca se existir ou estilizando) */
+.btn-busca {
+    padding: 10px 15px;
+    background-color: #8cbf74; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* O contêiner para os resultados deve ser flex para organizar os cards */
+.lista-cards-container { 
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos básicos para o Card do Profissional (injetado pelo JS) */
+.card-profissional {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px; 
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-profissional:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-profissional a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.foto-perfil-card {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #B6D084; /* Verde claro */
+}
+
+.info-card h3 {
+    color: #603F8B;
+    margin: 10px 0 5px 0;
+}
+
+.info-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.ver-perfil-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #B6D084;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.ver-perfil-btn:hover {
+    background-color: #91b95c;
+}

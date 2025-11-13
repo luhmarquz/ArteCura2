@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Profissionais - ArteCura</title>
+    
+    <link rel="stylesheet" href="./css/index.css">
+    
+    <link rel="stylesheet" href="./css/profissionais.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="./assets/logo.png" alt="Logo ArteCura" width="300px">
+
+        <div class="cabecalho-direita">
+            <div id="usuarioLogado" style="margin-right: 10px;"></div>
+
+            <div class="menu">
+                <a href="paginaPrincipal.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Arte terapia</a>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <a href="#" id="linkPerfil" class="nav-link">Perfil</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-perfis">
+        
+        <div class="busca-container">
+            <h2>Encontre Profissionais</h2>
+            <form id="formBusca" onsubmit="event.preventDefault(); buscarProfissionais();">
+                <input type="text" id="inputBusca" placeholder="Pesquisar por Cidade, Nome ou Especialidade">
+                <button type="submit" class="btn-busca">🔍 Buscar</button>
+            </form>
+        </div>
+
+        <div id="listaProfissionais" class="lista-cards-container">
+            <p style="width: 100%; text-align: center;">Carregando profissionais...</p>
+        </div>
+        
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div>
+                    <a href="paginaPrincipal.html">Início</a>
+                    <a href="artigosPagina.html">Artigos</a>
+                    <a href="paginaProfissionais.html">Profissionais</a>
+                    <a href="paginaVideos.html">Vídeos</a>
+                </div>
+                <div>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="#">Contato</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+                <div>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Comunidade</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+
+            <div class="portal-duvidas">
+                <p>Dúvidas? Entre em contato!</p>
+                <form>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Arte e Cura • Todos os direitos reservados</p>
+            <a href="#" class="back-to-top">↑ Voltar ao topo</a>
+        </div>
+    </footer>
+
+<script src="js/paginaProfissionais.js"></script>
+</html>

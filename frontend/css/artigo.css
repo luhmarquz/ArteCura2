@@ -1,0 +1,82 @@
+/* Estilo principal do título H1 */
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #603F8B;
+    font-size: 2.2em; /* Aumentei para dar mais destaque */
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Container da página de detalhe */
+.container-detalhe {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px 30px 30px 30px; /* Mais padding inferior */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.meta-info {
+    text-align: center;
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+.meta-info p {
+    margin: 5px 0;
+}
+.meta-info hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+#corpoConteudo {
+    margin-top: 30px;
+    line-height: 1.7;
+    font-size: 1.1em;
+    
+    /* ✅✅✅ ESTA É A LINHA ADICIONADA ✅✅✅ */
+    text-align: center; 
+}
+
+/* (NOVO) Estilo para o botão "Acessar Artigo" */
+.link-externo-artigo {
+    display: inline-block;
+    background: #8cbf74; /* Botão verde */
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    margin-top: 15px;
+}
+.link-externo-artigo:hover {
+    background: #72a361;
+}
+
+
+/* (NOVO) Estilo para o container do player de vídeo */
+.video-embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px; /* Arredonda as bordas do player */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.video-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

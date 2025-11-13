@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Visitante</title>
+    
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/perfilProfissional.css"> 
+    
+    <link rel="stylesheet" href="../css/perfil.css"> 
+</head>
+<body class="usuario">
+
+    <header class="cabecalho">
+        <img src="../assets/logo.png" alt="Logo" width="300px">
+        <div class="cabecalho-direita">
+            <div id="usuarioLogado" style="margin-right: 10px;"></div>
+            <div class="menu">
+                <a href="../paginaPrincipal.html" class="nav-link">Home</a>
+                <a href="../artigosPagina.html" class="nav-link">Artigos</a>
+                <a href="../paginaVideos.html" class="nav-link">Vídeos</a>
+                <a href="../paginaProfissionais.html" class="nav-link">Profissionais</a>
+                <a href="#" id="linkPerfil" class="nav-link">Perfil</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-banner">
+        
+        <form id="formFotoVisitante" enctype="multipart/form-data" class="profile-pic-wrapper">
+            <img src="../assets/placeholder-perfil.png" alt="Foto de Perfil" class="foto-perfil" id="fotoPerfilPreview">
+            
+            <label for="inputFotoVisitante" id="labelFotoVisitante" class="btn-editar-foto" style="display: none;">Trocar foto</label>
+            <input type="file" name="foto" id="inputFotoVisitante" accept="image/*" style="display: none;">
+            
+            <button type="button" id="btnLogout" class="btn-sair" style="display: none;">Sair da Conta</button>
+        </form>
+
+        <div class="profile-info">
+            <h2 id="nomeUsuario">Carregando...</h2>
+            <p class="nickname" id="nickname">@...</p>
+            
+            </div>
+
+        <div class="profile-actions">
+            <div class="stats-grid">
+                <button class="stat-button" id="btnAbrirModalSeguindo" style="display: none;">
+                    <div class="stat-item">
+                        <strong id="numSeguindo">0</strong>
+                        <span>seguindo</span>
+                    </div>
+                </button>
+            </div>
+
+            <div class="action-buttons">
+                <a href="editarPerfilVisitante.html" class="btn-editar-perfil" id="btnEditarPerfil" style="display: none;">
+                    Editar
+                </a>
+                
+                </div>
+        </div>
+
+    </div> 
+    <div id="modalSeguindo" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #603F8B; color: white; padding: 15px;">
+                <h3 style="margin: 0;">Seguindo</h3>
+                <button class="modal-close-btn" id="btnFecharModalSeguindo">&times;</button>
+            </div>
+            <div class="modal-list" id="listaModalSeguindo">
+                <p>Carregando...</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div>
+                    <a href="../paginaPrincipal.html">Início</a>
+                    <a href="../artigosPagina.html">Artigos</a>
+                    <a href="../paginaProfissionais.html">Profissionais</a>
+                    <a href="../paginaVideos.html">Vídeos</a>
+                </div>
+                <div>
+                    <a href="../sobre.html">Sobre Nós</a>
+                    <a href="#">Contato</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+                <div>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Comunidade</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+
+            <div class="portal-duvidas">
+                <p>Dúvidas? Entre em contato!</p>
+                <form>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Arte e Cura • Todos os direitos reservados</p>
+            <a href="#" class="back-to-top">↑ Voltar ao topo</a>
+        </div>
+    </footer>
+
+    <script src="../js/perfilUtils.js"></script>
+    <script src="../js/perfilVisitante.js"></script>
+</body>
+</html>

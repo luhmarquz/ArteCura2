@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administrador - ArteCura</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="../home.html">
+            <img src="../assets/logo.png" alt="Logo ArteCura" width="250px">
+        </a>
+        <div class="cabecalho-direita">
+            <div id="usuarioLogado" style="margin-right: 10px; color: white;"></div>
+            <div class="menu">
+                <a href="#" id="linkSair" class="nav-link">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <h2>Painel do Administrador</h2>
+
+        <div class="admin-layout">
+            
+            <section class="admin-section-form">
+                <h3>Cadastrar Novo Profissional</h3>
+                <form id="formCadastrarProfissional" class="admin-form">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha Provisória:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="especialidade">Especialidade:</label>
+                        <input type="text" id="especialidade" name="especialidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento">
+                    </div>
+
+                    <button type="submit">Cadastrar Profissional</button>
+                    <p id="msgErroForm" style="color: red; margin-top: 10px;"></p>
+                    <p id="msgSucessoForm" style="color: green; margin-top: 10px;"></p>
+                
+                </form>
+            </section>
+
+            <section class="admin-section-table">
+                <h3>Profissionais Cadastrados</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Especialidade</th>
+                            <th>Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaProfissionaisBody">
+                        <tr>
+                            <td colspan="5">Carregando profissionais...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    
+    <script src="../js/perfilUtils.js"></script> <script src="../js/dashboardAdmin.js"></script>
+
+</body>
+</html>

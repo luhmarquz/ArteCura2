@@ -1,0 +1,85 @@
+/* ==================================================== */
+/* ARQUIVO: adicionarPostagem.css */
+/* Estilo roxo do card de edição, adaptado para postagens */
+/* ==================================================== */
+
+/* Garante que o body e o header não atrapalhem */
+body {
+    background-color: #f8f8f8;
+}
+main {
+    flex-grow: 1; /* Empurra o footer para baixo */
+}
+
+/* Container Principal do Formulário (O Card Roxo) */
+.form-card-container {
+    max-width: 600px; /* Largura ideal para o formulário */
+    margin: 50px auto;
+    padding: 30px 40px;
+    background-color: #603F8B; /* Cor de fundo roxa */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.form-card-container h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Estilização do Formulário */
+#formAdicionarPostagem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre grupos de label/input */
+}
+
+/* Estilização das Labels */
+#formAdicionarPostagem label {
+    font-weight: 500;
+    color: #f0f0f0; /* Cor mais clara para contraste */
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+/* Estilização dos Campos de Input e Select */
+#formAdicionarPostagem input[type="text"],
+#formAdicionarPostagem select {
+    padding: 12px;
+    border: none; /* Remove bordas */
+    border-radius: 8px; /* Cantos arredondados */
+    background-color: white; 
+    color: #333;
+    width: 100%;
+    box-sizing: border-box; 
+    font-size: 1em;
+    transition: box-shadow 0.2s;
+}
+
+#formAdicionarPostagem input:focus,
+#formAdicionarPostagem select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #8cbf74; /* Borda de foco verde */
+}
+
+/* Estilo do Botão Primário (Publicar) */
+.btn-acao-primaria {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.05em;
+    background-color: #8cbf74; /* Verde */
+    color: white;
+    transition: background-color 0.2s;
+    margin-top: 15px; /* Espaço antes do botão */
+}
+
+.btn-acao-primaria:hover {
+    background-color: #7bb063;
+}

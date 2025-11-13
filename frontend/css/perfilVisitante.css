@@ -1,0 +1,109 @@
+/* ==================================== */
+/* ESTILOS PARA PERFIL VISITANTE */
+/* ==================================== */
+
+.container-perfil-visitante {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fundo leve */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho-perfil-visitante {
+    background-color: #603F8B; /* Cor principal da ArteCura (Roxo) */
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 180px; /* Garante espaço */
+}
+
+.foto-perfil-visitante {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Posicionamento para destaque */
+    margin-right: 30px;
+}
+
+.detalhes-usuario-visitante {
+    flex-grow: 1;
+}
+
+.detalhes-usuario-visitante h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.detalhes-usuario-visitante p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #f0f0f0;
+}
+
+.nickname-visitante {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.estatisticas-visitante {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    gap: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.estatisticas-visitante div {
+    text-align: center;
+}
+
+.estatisticas-visitante span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.acoes-perfil-visitante {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+.acoes-perfil-visitante button, .acoes-perfil-visitante a {
+    background-color: #8cbf74; /* Botão de Ação (Verde) */
+    color: #603F8B;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.acoes-perfil-visitante button:hover, .acoes-perfil-visitante a:hover {
+    background-color: #72a361;
+}
+
+/* Estilos para o Conteúdo de Edição (Formulário) */
+.form-edicao-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}

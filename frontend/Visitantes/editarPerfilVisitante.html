@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil Visitante</title>
+    
+    <link rel="stylesheet" href="../css/editarVisitante.css"> 
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="../assets/logo.png" alt="Logo" width="300px">
+        <div class="cabecalho-direita">
+            <div class="menu">
+                <a href="../paginaPrincipal.html" class="nav-link">Home</a>
+                <a href="../paginaPrincipal.html" class="nav-link">Arte terapia</a>
+            </div>
+        </div>
+    </header>
+
+  <div class="perfil-card editar-perfil">
+        <h1>Editar Meu Perfil</h1>
+        
+        <form id="formEditarPerfilVisitante">
+            
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required> 
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required> 
+            
+            <label for="senha">Nova Senha (deixe em branco para não alterar)</label>
+            <input type="password" id="senha" name="senha" placeholder="Deixe em branco para não alterar">
+            
+            <div class="botoes-form"> 
+                <button type="submit" class="btn-acao-primaria">Salvar Alterações</button>
+                <button type="button" class="btn-acao-secundaria" onclick="window.history.back()">Cancelar</button>
+            </div>
+        </form>
+
+        <div style="margin-top: 30px; border-top: 1px solid #9980b3; padding-top: 20px; text-align: center;">
+             <button class="btn-deletar" onclick="deletarContaVisitante()">
+                Deletar Conta Permanentemente
+            </button>
+        </div>
+
+    </div>
+
+    <script src="../js/perfilUtils.js"></script> 
+    <script src="../js/editarPerfilVisitantes.js"></script>
+</body>
+</html>

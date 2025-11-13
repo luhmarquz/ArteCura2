@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Nova Postagem</title>
+    <link rel="stylesheet" href="../css/index.css"> 
+    
+    <link rel="stylesheet" href="../css/adicionarPostagem.css"> 
+</head>
+<body>
+
+    <header class="cabecalho">
+    <img src="../assets/logo.png" alt="Logo" width="300px">
+    <div class="cabecalho-direita">
+      <div id="usuarioLogado" style="margin-right: 10px;"></div>
+      <div class="menu">
+        <a href="../paginaPrincipal.html" class="nav-link">Home</a>
+        <a href="../paginaPrincipal.html" class="nav-link">Arte terapia</a>
+        <a href="../sobre.html" class="nav-link">Sobre</a>
+        <a href="#" id="linkPerfil" class="nav-link">Perfil</a>
+      </div>
+    </div>
+  </header>
+    
+    <main class="form-card-container">
+        <h1>Criar Nova Postagem</h1>
+        
+        <form id="formAdicionarPostagem">
+            
+            <div>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+
+            <div>
+                <label for="tipo">Tipo de Conteúdo:</label>
+                <select id="tipo" name="tipo" required onchange="toggleCampos()">
+                    <option value="">Selecione o tipo...</option>
+                    <option value="artigo">Artigo (Upload de PDF)</option>
+                    <option value="video">Vídeo (Link do YouTube)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione a categoria...</option>
+                    <option value="Métodos">Métodos</option>
+                    <option value="História">História</option>
+                    <option value="Científico">Científico</option>
+                    <option value="Formação">Formação</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div id="campo-artigo" style="display: none;">
+                <label for="arquivo_pdf">Arquivo do Artigo (PDF):</label>
+                <input type="file" id="arquivo_pdf" name="arquivo_pdf" accept=".pdf" 
+                       style="background-color: white; padding: 10px; border-radius: 8px;">
+            </div>
+
+            <div id="campo-video" style="display: none;">
+                <label for="conteudo_url">URL do Vídeo (Link do YouTube):</label>
+                <input type="text" id="conteudo_url" name="conteudo_url" placeholder="https://youtube.com/...">
+            </div>
+
+            <button type="submit" class="btn-acao-primaria">Publicar Postagem</button>
+
+        </form>
+    </main>
+
+    
+    <script src="../js/adicionarPostagem.js"></script>
+    <script src="../js/perfilUtils.js"></script>
+
+    <script>
+        function toggleCampos() {
+            const tipo = document.getElementById('tipo').value;
+            const campoArtigo = document.getElementById('campo-artigo');
+            const campoVideo = document.getElementById('campo-video');
+            
+            if (tipo === 'artigo') {
+                campoArtigo.style.display = 'block';
+                campoVideo.style.display = 'none';
+            } else if (tipo === 'video') {
+                campoArtigo.style.display = 'none';
+                campoVideo.style.display = 'block';
+            } else {
+                campoArtigo.style.display = 'none';
+                campoVideo.style.display = 'none';
+            }
+        }
+        // Garante que rode ao carregar a página também (caso o browser lembre a seleção)
+        toggleCampos(); 
+    </script>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div>
+                    <a href="../paginaPrincipal.html">Início</a>
+                    <a href="../artigosPagina.html">Artigos</a>
+                    <a href="../paginaProfissionais.html">Profissionais</a>
+                    <a href="../paginaVideos.html">Vídeos</a>
+                </div>
+                <div>
+                    <a href="../sobre.html">Sobre Nós</a>
+                    <a href="#">Contato</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+                <div>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Comunidade</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+    
+            <div class="portal-duvidas">
+                <p>Dúvidas? Entre em contato!</p>
+                <form>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Arte e Cura • Todos os direitos reservados</p>
+            <a href="#" class="back-to-top">↑ Voltar ao topo</a>
+        </div>
+    </footer>
+</body>
+</html>

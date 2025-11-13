@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="../assets/logo.png" alt="Logo" width="300px">
+    
+        <div class="cabecalho-direita">
+            
+            <div class="menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Arte terapia</a>
+            </div>
+        </div>
+</header>
+
+<div class="container-editarPerfilProfissional">
+    <div class="editar-box">
+        <h2>Editar Perfil</h2>
+        <form id="formEditarProfissional" onsubmit="event.preventDefault(); salvarAlteracoesProfissional();"> 
+            
+            <div class="input-groupEditar">
+                <label for="email">Inserir novo E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="input-groupEditar">
+                <label for="username">Inserir novo nome de usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+<div class="input-groupEditar">
+    <label for="senha">Inserir nova senha</label>
+    <input type="password" id="senha" name="senha" placeholder="Deixe vazio para não alterar">
+</div>
+            
+            <div class="input-groupEditar">
+                <label for="cidade">Inserir nova cidade</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+
+                        <div class="input-groupEditar">
+                <label for="especialidade">Corrigir especialidade</label>
+                <input type="text" id="especialidade" name="especialidade" required>
+            </div>
+
+            <div class="input-groupEditar">
+    <label for="bio">Sua Biografia</label>
+    <textarea id="bio" name="bio" rows="4" placeholder="Fale sobre sua experiência e especialidades..."></textarea>
+</div>
+
+<div class="input-groupEditar">
+    <label for="whatsapp">Link do WhatsApp (apenas o número com DDD)</label>
+    <input type="text" id="whatsapp" name="whatsapp" placeholder="Ex: 5511987654321">
+</div>
+
+<div class="input-groupEditar">
+    <label for="instagram">Nome de usuário do Instagram</label>
+    <input type="text" id="instagram" name="instagram" placeholder="Ex: @seuusuario">
+</div>
+            
+            <button type="submit" class="editarPerfilProfissional-button">Salvar alterações</button>
+        </form>
+        
+        <button class="deletar-btn" onclick="deletarContaProfissional()" style="background-color: #f44336; color: white; margin-top: 15px; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">
+            Deletar Conta
+        </button>
+    </div>
+</div>
+
+<script src="../js/perfilUtils.js"></script>
+<script src="../js/editarPerfilProfissional.js"></script>
+
+</body>
+</html>
